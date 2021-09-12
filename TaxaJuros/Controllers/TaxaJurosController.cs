@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using System.Net.Mime;
-using System.Globalization;
-using System;
 
 namespace TaxaJuros.Controllers
 {

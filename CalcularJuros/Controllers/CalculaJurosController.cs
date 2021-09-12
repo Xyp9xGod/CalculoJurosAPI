@@ -12,12 +12,10 @@ namespace CalculaJuros.Controllers
     [Route("[controller]")]
     public class CalculaJurosController : ControllerBase
     {
-        //[HttpPost("{valorinicial}/{meses}")]
         [HttpPost]
         [Produces(MediaTypeNames.Application.Json)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<string> GetCalculoJurosAsync([FromQuery] CalculaJuros calculaJuros)
         {
             try
@@ -44,8 +42,22 @@ namespace CalculaJuros.Controllers
             }
             catch (Exception ex)
             {
-                return String.Format("Erro no Cálculo de Juros. Ex: {0}",
-                         ex.Message);
+                return String.Format("Erro no Cálculo de Juros. Ex: {0}", ex.Message);
+            }
+        }
+
+        [HttpGet("/ShowMeTheCode")]
+        [Produces(MediaTypeNames.Application.Json)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public string GetProjectGitHubUrl()
+        {
+            try
+            {
+                return "https://github.com/Xyp9xGod/CalculoJurosAPI";
+            }
+            catch (Exception ex)
+            {
+                return String.Format("Erro no Cálculo de Juros. Ex: {0}", ex.Message);
             }
         }
     }
