@@ -55,7 +55,7 @@ namespace CalculaJuros.Controllers
             }
         }
 
-        [HttpGet("/ShowMeTheCode")]
+        [HttpGet("ShowMeTheCode")]
         [Produces(MediaTypeNames.Application.Json)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public string GetProjectGitHubUrl()
