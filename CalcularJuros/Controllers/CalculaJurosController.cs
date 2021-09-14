@@ -21,10 +21,6 @@ namespace CalculaJuros.Controllers
         {
             try
             {
-                if(calculaJuros.valorInicial == 0 || calculaJuros.meses == 0)
-                {
-                    return "Informe todos os parâmetros para realizar o cálculo.";
-                }
                 double taxaJuros = 0;
                 using (var httpClient = new HttpClient())
                 {

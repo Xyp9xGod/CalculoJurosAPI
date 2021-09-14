@@ -14,8 +14,6 @@ namespace TaxaJuros.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public double Get()
         {
-            //var taxaJuros = 0.01;
-            //return taxaJuros.ToString("N2", CultureInfo.CreateSpecificCulture("pt-BR"));
             return 0.01;
         }
     }

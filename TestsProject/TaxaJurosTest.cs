@@ -12,7 +12,7 @@ namespace TestsProject
         }
 
         [Fact]
-        public void callTaxaJurosReturnCorrectValue()
+        public void GetTaxaJuros_ReturnCorrectValue()
         {
             // Act
             var retorno = _controller.Get();
@@ -22,7 +22,7 @@ namespace TestsProject
         }
 
         [Fact]
-        public void callTaxaJurosReturnIncorrectValue()
+        public void GetTaxaJuros_ReturnIncorrectValue()
         {
             // Act
             var retorno = _controller.Get();
