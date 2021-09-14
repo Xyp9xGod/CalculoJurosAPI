@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CalcularJuros\CalculaJuros.csproj" />
+    <ProjectReference Include="..\CalculaJuros\CalculaJuros.csproj" />
     <ProjectReference Include="..\TaxaJuros\TaxaJuros.csproj" />
   </ItemGroup>
 
