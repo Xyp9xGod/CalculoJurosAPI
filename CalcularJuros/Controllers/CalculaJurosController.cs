@@ -9,21 +9,26 @@ using System.Threading.Tasks;
 namespace CalculaJuros.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class CalculaJurosController : ControllerBase
     {
-        [HttpPost]
+        [HttpGet]
         [Produces(MediaTypeNames.Application.Json)]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<string> GetCalculoJurosAsync([FromQuery] CalculaJuros calculaJuros)
         {
             try
             {
+                if(calculaJuros.valorInicial == 0 || calculaJuros.meses == 0)
+                {
+                    return "Informe todos os parâmetros para realizar o cálculo.";
+                }
                 double taxaJuros = 0;
                 using (var httpClient = new HttpClient())
                 {
-                    using (var response = await httpClient.GetAsync("https://localhost:44391/TaxaJuros"))
+                    using (var response = await httpClient.GetAsync("https://localhost:44391/api/TaxaJuros"))
                     {
                         if (response.StatusCode == System.Net.HttpStatusCode.OK)
                         {
@@ -32,7 +37,7 @@ namespace CalculaJuros.Controllers
                         }
                         else
                         {
-                            BadRequest("Erro ao buscar Taxa de Juros, tente novamente.");
+                            return "Erro ao buscar Taxa de Juros, tente novamente.";
                         }
                     }
                 }

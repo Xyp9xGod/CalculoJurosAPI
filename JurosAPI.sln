@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculaJuros", "CalcularJuros\CalculaJuros.csproj", "{015AA29D-B252-4BE5-B2F3-30C788B615CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculaJuros", "CalcularJuros\CalculaJuros.csproj", "{015AA29D-B252-4BE5-B2F3-30C788B615CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxaJuros", "TaxaJuros\TaxaJuros.csproj", "{F81D9FB7-0313-4FD3-A40F-F29C14E6C16E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxaJuros", "TaxaJuros\TaxaJuros.csproj", "{F81D9FB7-0313-4FD3-A40F-F29C14E6C16E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsProject", "TestsProject\TestsProject.csproj", "{9AECAD0C-CCEC-47CE-8F42-440AFB320FE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F81D9FB7-0313-4FD3-A40F-F29C14E6C16E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F81D9FB7-0313-4FD3-A40F-F29C14E6C16E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F81D9FB7-0313-4FD3-A40F-F29C14E6C16E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AECAD0C-CCEC-47CE-8F42-440AFB320FE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AECAD0C-CCEC-47CE-8F42-440AFB320FE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AECAD0C-CCEC-47CE-8F42-440AFB320FE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AECAD0C-CCEC-47CE-8F42-440AFB320FE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
