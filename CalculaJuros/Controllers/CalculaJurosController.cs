@@ -21,6 +21,14 @@ namespace CalculaJuros.Controllers
         {
             try
             {
+                if (calculaJuros.valorInicial < 1)
+                {
+                    return "Valor inicial dever ser maior que 0.";
+                }
+                if (calculaJuros.meses <= 0)
+                {
+                    return "Número de meses deve ser maior que 0.";
+                }
                 double taxaJuros = 0;
                 using (var httpClient = new HttpClient())
                 {

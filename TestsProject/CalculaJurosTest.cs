@@ -14,15 +14,27 @@ namespace TestsProject
         }
 
         [Fact]
-        public void GetCalculoJuros_WithInvalidParametersValue0Month0_ExpectedValue()
+        public void GetCalculoJuros_WithInvalidMonth_ExpectedReturn()
         {
             // Act
-            _calculaJuros.valorInicial = 0;
-            _calculaJuros.meses = 0;
+            _calculaJuros.valorInicial = 2;
+            _calculaJuros.meses = -3;
             var retorno = _controller.GetCalculoJurosAsync(_calculaJuros);
 
             // Assert
-            Assert.Equal("105,10", retorno.Result);
+            Assert.Equal("Número de meses deve ser maior que 0.", retorno.Result);
+        }
+
+        [Fact]
+        public void GetCalculoJuros_WithInvalidValue_ExpectedReturn()
+        {
+            // Act
+            _calculaJuros.valorInicial = -5;
+            _calculaJuros.meses = 1;
+            var retorno = _controller.GetCalculoJurosAsync(_calculaJuros);
+
+            // Assert
+            Assert.Equal("Valor inicial dever ser maior que 0.", retorno.Result);
         }
 
         [Fact]
