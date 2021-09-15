@@ -13,6 +13,6 @@ Realiza cálculo de juros dados parâmetros de Valor inicial e Tempo.
     1. Os endpoints estão disponíveis no swaggwer.
 
 # Pontos de Melhoria
-    1.Inicializar as APIs via docker.
+    1. Inicializar as APIs via docker.
     2. Necessário utilizar o método Autenticação para que seja gerado um token de acesso.
     3. Autorização via Jwt.
