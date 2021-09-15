@@ -7,3 +7,6 @@ Realiza cálculo de juros dados parâmetros de Valor inicial e Tempo.
 # API CalculaJuros
 1. Endpoint "/api/CalculaJuros": Acessa o endpoint "/api/TaxaJuros" para buscar a taxa de juros e realiza o cálculo de juros com base nos parâmetros de Valor inicial e Tempo.
 2. Endpoint "/api/CalculaJuros/ShowMeTheCode": Retornar Url do projeto no github.
+
+# Pontos de Melhoria
+Inicializar as APIs via docker.
